@@ -13,7 +13,6 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
 #terrain{ /**caractéristique du terrain : position, bordure (ligne "imaginaire" qui ne fait pas encore rebondir la balle) et dimensions **/
     position: relative;
     border:1px solid white;
-    
     width:800px;
     height:400px
 }
