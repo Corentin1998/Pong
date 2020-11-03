@@ -1,2 +1,2 @@
 # pong
-https://corentin1998.github.io/Pong/
+https://corentin1998.github.io/Pong/index.html
