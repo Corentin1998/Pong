@@ -10,7 +10,7 @@ body{ /*éléments de bases (couleur, typographie, etc)*/
     text-align: center;
 }
 
-#terrain{ /*caractéristique du terrain : position, bordure (ligne "imaginaire" qui ne fait pas encore rebondir la balle) et dimensions */
+#terrain{ /**caractéristique du terrain : position, bordure (ligne "imaginaire" qui ne fait pas encore rebondir la balle) et dimensions **/
     position: relative;
     border:1px solid white;
     
@@ -18,7 +18,7 @@ body{ /*éléments de bases (couleur, typographie, etc)*/
     height:400px
 }
 
-#balle{ /*caractéristique de la balle : position, dimensions, couleur, etc*/
+#balle{ /**caractéristique de la balle : position, dimensions, couleur, etc**/
     position: absolute;
     top:50%;
     left:50%;
