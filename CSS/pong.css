@@ -21,8 +21,28 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     position: absolute;
     top:50%;
     left:50%;
+    right:50%;
+    bottom:50%;
     width: 20px;
     height: 20px;
     background-color:#fff;
     border-radius: 10px;
+}
+
+#raquette1{
+    position: absolute;
+    top:50%;
+    right:95%;
+    width: 10px;
+    height: 100px;
+    background-color:#fff;
+}
+
+#raquette2{
+    position: absolute;
+    top:50%;
+    left:95%;
+    width: 10px;
+    height: 100px;
+    background-color:#fff;
 }

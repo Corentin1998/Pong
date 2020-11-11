@@ -45,7 +45,7 @@ setInterval(function(){
 
     if(balle.haut<0){
         balle.haut=0;
-        balle.vitesseY=balle.vitesseY*-1;   
+        balle.vitesseY=balle.vitesseY*-1;
     }
     balle.majHTML();
 }, 10);
