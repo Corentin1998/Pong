@@ -12,7 +12,9 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
 
 #terrain{ /**caractéristique du terrain : position, bordure (ligne "imaginaire" qui ne fait pas encore rebondir la balle) et dimensions **/
     position: relative;
-    border:1px solid white;
+    border: 1px solid #000; /**rendre tous les conteurs noirs, sauf celui du haut et du bas qui sont blancs**/
+    border-top-color: #fff;
+    border-bottom-color: #fff;
     width:800px;
     height:400px
 }
@@ -21,27 +23,25 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     position: absolute;
     top:50%;
     left:50%;
-    right:50%;
-    bottom:50%;
     width: 20px;
     height: 20px;
     background-color:#fff;
     border-radius: 10px;
 }
 
-#raquette1{
-    position: absolute;
-    top:50%;
-    right:95%;
+#raquette1{ /**caractéristiques de la raquette : position, hauteur, etc**/
+    position: relative;
+    top:20%;
+    left:10%;
     width: 10px;
     height: 100px;
     background-color:#fff;
 }
 
-#raquette2{
-    position: absolute;
-    top:50%;
-    left:95%;
+#raquette2{ /**pareil que raquette1**/
+    position: relative;
+    top:20%;
+    left: 90%;
     width: 10px;
     height: 100px;
     background-color:#fff;
