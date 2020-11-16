@@ -10,9 +10,9 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     text-align: center;
 }
 
-#terrain{ /**caractéristique du terrain : position, bordure (ligne "imaginaire" qui ne fait pas encore rebondir la balle) et dimensions **/
+#terrain{ /**caractéristiques du terrain : position, bordure (ligne "imaginaire" qui ne fait pas encore rebondir la balle) et dimensions **/
     position: relative;
-    border: 1px solid #000; /**rendre tous les conteurs noirs, sauf celui du haut et du bas qui sont blancs**/
+    border: 1px solid #000; /**rendre tous les contours noirs, sauf celui du haut et du bas qui sont blancs**/
     border-top-color: #fff;
     border-bottom-color: #fff;
     width:800px;
