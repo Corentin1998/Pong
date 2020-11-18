@@ -29,20 +29,18 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     border-radius: 10px;
 }
 
-#raquette1{ /**caractéristiques de la raquette : position, hauteur, etc**/
-    position: relative;
-    top:20%;
-    left:10%;
+.raquette{ /**caractéristiques de la raquette : position, hauteur, etc**/
+    position: absolute;
+    top : 50%;
     width: 10px;
     height: 100px;
     background-color:#fff;
 }
 
-#raquette2{ /**pareil que raquette1**/
-    position: relative;
-    top:20%;
-    left: 90%;
-    width: 10px;
-    height: 100px;
-    background-color:#fff;
+#raquette1{
+    left:10%;
+}
+
+#raquette2{
+    right: 10%;
 }
