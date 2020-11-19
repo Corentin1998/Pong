@@ -9,3 +9,4 @@ class Terrain{
 //définition de la variable terrain
 let terrain=new Terrain($("#terrain"));
 console.log(terrain);
+

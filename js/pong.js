@@ -1,7 +1,13 @@
 
 /*modifier la position de la balle toutes les 10 millisecondes*/
 setInterval(function(){
-    balle.gauche=balle.gauche+balle.vitesseX;
+    raquetteGauche.bouge(); //raquette1 peut s'appeler raquetteGauche ça me va aussi hein...
+    raquetteDroite.bouge();
+    balle.bouge();
+
+
+
+    /*balle.gauche=balle.gauche+balle.vitesseX;
     balle.haut=balle.haut+balle.vitesseY;
     
     // si balle sort à droite = pars dans la direction dans la direction inverse
@@ -29,8 +35,8 @@ setInterval(function(){
     }
 
     //déplacement en fonction de la vitesse
-    raquette1.haut=raquette1.haut+raquette1.vitesse;
-    raquette2.haut=raquette2.haut+raquette2.vitesse;
+    raquette.haut=raquette1.haut+raquette1.vitesse;
+    raquette.haut=raquette2.haut+raquette2.vitesse;
 
     // si raquette de gauche arrive en bas, elle remonte
     if(raquette1.haut>terrain.hauteur-raquette1.hauteur){
@@ -58,17 +64,44 @@ setInterval(function(){
 
     balle.majHTML();
     raquette1.majHTML();
-    raquette2.majHTML();
+    raquette2.majHTML();*/
 }, 10);
 
 window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) { return}
-    console.log("La touche '"+event.key+ "' a été enfoncée")
+    if (event.defaultPrevented) {
+        return;
+    }
+    if(event.key === "a"){
+        raquettegauche.monte();
+    }
+    if(event.key === "q"){
+        raquettegauche.descend();
+    }
+    if(event.key === "p"){
+        raquettedroite.monte();
+    }
+    if(event.key === "m"){
+        raquettedroite.descend();
+    }
     event.preventDefault();
 }, true);
 
-window.addEventListener("keyup", function (event) {
-    if (event.defaultPrevented) { return}
-    console.log("La touche '"+event.key+ "' a été relachée")
+
+window.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented) {
+        return;
+    }
+    if(event.key === "a"){
+        raquettegauche.arret();
+    }
+    if(event.key === "q"){
+        raquettegauche.arret();
+    }
+    if(event.key === "p"){
+        raquettedroite.arret();
+    }
+    if(event.key === "m"){
+        raquettedroite.arret();
+    }
     event.preventDefault();
 }, true);

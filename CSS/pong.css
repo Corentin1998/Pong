@@ -37,10 +37,10 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     background-color:#fff;
 }
 
-#raquette1{
+#gauche{
     left:10%;
 }
 
-#raquette2{
+#droite{
     right: 10%;
 }
