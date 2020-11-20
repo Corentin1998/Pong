@@ -1,15 +1,15 @@
 class Raquette{
-    constructor($html){
-        this.$html=$html;
-        this.hauteur = $html.height();
-        this.largeur = $html.width();
-        this.positionX = parseInt($html.css("left"));
-        this.positionY = parseInt($html.css("top"));
+    constructor($element){
+        this.$element=$element;
+        this.hauteur = $element.height();
+        this.largeur = $element.width();
+        this.positionX = parseInt($element.css("right"));
+        this.positionY = parseInt($element.css("top"));
         this.vitesse=1;
         this.direction=1;
     }
 
-    get bas
+    get bas(){
         return this.positionY + this.hauteur
     }
 
@@ -25,7 +25,7 @@ class Raquette{
         this.positionX = value - this.largeur;
     }
 
-    bouge() {
+    bouger() {
         this.positionY += this.vitesse * this.direction;
         this.limite();
         this.majHTML();
@@ -58,6 +58,3 @@ class Raquette{
         }
     }
 }
-
-let raquetteGauche = new Raquette($("#gauche"));
-let raquetteDroite = new Raquette($("#droite"));

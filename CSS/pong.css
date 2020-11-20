@@ -31,6 +31,7 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
 
 .raquette{ /**caractéristiques de la raquette : position, hauteur, etc**/
     position: absolute;
+    --hauteur: 25%;
     top : 50%;
     width: 10px;
     height: 100px;
