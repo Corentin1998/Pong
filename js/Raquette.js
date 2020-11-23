@@ -25,7 +25,7 @@ class Raquette{
         this.positionX = value - this.largeur;
     }
 
-    bouger() {
+    bouge() {
         this.positionY += this.vitesse * this.direction;
         this.limite();
         this.majHTML();
