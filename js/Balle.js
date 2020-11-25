@@ -3,10 +3,11 @@ class Balle{ // class Balle
         this.$element=$element;
         this.largeur=$element.width();
         this.hauteur=$element.height();
-        this.positionX=parseInt($element.css("top"));
-        this.positionY=parseInt($element.css("left"));
+        this.positionX=parseInt($element.css("left"));
+        this.positionY=parseInt($element.css("top"));
         this.vitesseX=2;
         this.vitesseY=0.5;
+        this.angle = Math.random() * 2 * Math.PI;
     }
 
     get bas() {
@@ -26,25 +27,11 @@ class Balle{ // class Balle
     }
 
     bouge() {
-        this.positionY += this.vitesse * this.direction;
+        this.positionX += Math.cos(this.angle) * this.vitesseX;
+        this.positionY += Math.sin(this.angle) * this.vitesseY;
+
         this.limite();
         this.majHTML();
-    }
-
-    monter() {
-        this.direction = -1;
-    }
-
-    descendre() {
-        this.direction = 1;
-    }
-
-    arret() {
-        this.direction = 0;
-    }
-
-    majHTML() {
-        this.$element.css("top", this.positionY);
     }
 
     limite() {
@@ -74,19 +61,19 @@ class Balle{ // class Balle
             this.positionY = 0;
             this.vitesseY *= -1;
         }
-
+        //Rebonds sur les raquettes
         //Gauche
-        if(this.positionX < raquetteGauche.droite){
-            if(this.bas > raquetteGauche.positionY){
-                if(this.positionY < raquetteGauche.bas){
+        if(this.positionX < raquetteGauche.droite){ //si la balle dépasse à gauche de la raquette gauche
+            if(this.bas > raquetteGauche.positionY){ //et si la balle est plus basse que le haut de la raquette
+                if(this.positionY < raquetteGauche.bas){ // et si la balle est plus haute que le bas de la raquette
                     this.vitesseX *= -1;
                 }
             }
         }
         //Droite
-        if(this.droite > raquetteDroite.positionX){
-            if(this.bas > raquetteDroite.positionY){
-                if(this.positionY < raquetteDroite.bas){
+        if(this.droite > raquetteDroite.positionX){ //si la balle dépasse à droite la raquette droite
+            if(this.bas > raquetteDroite.positionY){ //et si la balle est plus basse que le haut de la raquette
+                if(this.positionY < raquetteDroite.bas){ // et si la balle est plus haute que le bas de la raquette
                     this.vitesseX *= -1;
                 }
             }

@@ -3,10 +3,10 @@ class Raquette{
         this.$element=$element;
         this.hauteur = $element.height();
         this.largeur = $element.width();
-        this.positionX = parseInt($element.css("right"));
+        this.positionX = parseInt($element.css("left"));
         this.positionY = parseInt($element.css("top"));
-        this.vitesse=1;
-        this.direction=1;
+        this.vitesse=2;
+        this.direction=0;
     }
 
     get bas(){

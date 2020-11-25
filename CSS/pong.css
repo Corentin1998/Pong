@@ -19,6 +19,21 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     height:400px
 }
 
+.tiltHaut {
+    border-top-color: rgb(0, 250, 0) !important;
+}
+
+.tiltBas {
+    border-bottom-color: rgb(0, 250, 0) !important;
+}
+.tiltGauche {
+    border-left-color: rgb(250, 0, 0) !important;
+}
+
+.tiltDroite {
+    border-right-color: rgb(250, 0, 0) !important;
+}
+
 #balle{ /**caractéristique de la balle : position, dimensions, couleur, etc**/
     position: absolute;
     top:50%;
@@ -32,7 +47,7 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
 .raquette{ /**caractéristiques de la raquette : position, hauteur, etc**/
     position: absolute;
     --hauteur: 25%;
-    top : 50%;
+    top: calc(50% - var(--hauteur) / 2);
     width: 10px;
     height: 100px;
     background-color:#fff;
@@ -44,4 +59,3 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
 
 #droite{
     right: 10%;
-}
