@@ -1,4 +1,4 @@
-class Balle{ // class raquette
+class Balle{ // class Balle
     constructor($element){
         this.$element=$element;
         this.largeur=$element.width();
@@ -25,7 +25,7 @@ class Balle{ // class raquette
         this.positionX = value - this.largeur;
     }
 
-    bouger() {
+    bouge() {
         this.positionY += this.vitesse * this.direction;
         this.limite();
         this.majHTML();
