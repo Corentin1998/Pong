@@ -59,3 +59,18 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
 
 #droite{
     right: 10%;
+}
+
+.score{
+    position:absolute;
+    font-size:50px;
+    top:50%;
+}
+
+#scoreGauche{
+    left:40%;
+}
+
+#scoreDroite{
+    right:40%;
+}
