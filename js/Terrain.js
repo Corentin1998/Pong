@@ -49,4 +49,7 @@ class Terrain {
             }, 200
         );
     }
+    masqueEcranDebut(){
+        this.$ecranDebut.addClass("invisible");
+    }
 }
