@@ -130,3 +130,7 @@ body{ /**éléments de bases (couleur, typographie, etc)**/
     -webkit-box-shadow: 3px 3px 12px #444444;
     -moz-box-shadow: 3px 3px 12px #444444;
 }
+
+.invisible {
+    display: none;
+}
