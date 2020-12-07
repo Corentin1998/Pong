@@ -3,12 +3,21 @@ let balle = new Balle($("#balle"));
 let raquetteGauche = new Raquette($("#gauche"));
 let raquetteDroite = new Raquette($("#droite"));
 
+let demarrer = false;
+
 setInterval(function () {
-    balle.bouge();
-    raquetteGauche.bouge();
-    raquetteDroite.bouge();
+    if(demarrer) {
+        balle.bouge();
+        raquetteGauche.bouge();
+        raquetteDroite.bouge();
+    }
 }, 10);
 
+$("#btn-jouer").on("mouseup", function (event) {
+    event.preventDefault();
+    demarrer=true;
+    $("#ecran-debut").addClass("invisible");
+});
 
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
